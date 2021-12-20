@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+      <div> 
+    {{#if userInSession}}
+        <h2>Welcome, {{ userInSession.username }}!</h2>
+        <p>This is your profile page my friend!</p>
+        <button>
+        <a href="/profile">Reload the page</a>
+        </button>
+         
+         <button>
+        <a href="/main">main</a>
+        </button>
+        
+         <button>
+        <a href="/private">private</a>
+        </button>
+        
+    {{else}}
+         <p>Still no logged in user, sorry!</p>
+    {{/if}}        
+    </div>
+  </body>
+
+</html>
